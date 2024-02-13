@@ -30,13 +30,17 @@ export default async function Page({params}:{params:{slug:string}}){
 
     const urlString = product?.images
     return(
-        <div className='max-w-[1280px] mx-auto px-3 py-3'>
-        <div className='grid grid-cols-2'>
-          <div className='flex flex-col col-span-2'>
-            <div className='font-semibold text-2xl mb-2'>
-              <a href="/">NPP Store</a>
-            </div>
-            <hr />
+    <div className='max-w-[1280px] mx-auto px-3 py-3'>
+      <div className='grid grid-cols-2'>
+        <div className='flex flex-col col-span-2'>
+          <div className='font-semibold text-2xl mb-2'>
+            <a href="/">NPP Store</a>
+          </div>
+          <hr />
+        </div>
+      
+        <div className='flex flex-row col-span-2 mb-20 mt-20'>
+        <div className='flex'>
             {product && (
               <div className='grid grid-cols-2 mt-10 gap-14'>
                 {urlString && (
@@ -45,12 +49,11 @@ export default async function Page({params}:{params:{slug:string}}){
               </div>
             )}
           </div>
-      
-          <div className='flex flex-col col-span-2 mb-20 mt-20'>
-            <div className=' items-center space-x-5 mb-0 pt-7'>
+          <div className='flex flex-col'>
+            <div className=' items-center space-x-5 mb-10 pt-7'>
               <span className='w-[5px] h-[30px] bg-purple-600 rounded-full inline-block'></span>
-              <span className='font-medium text-xl'>Product Description</span>
-            </div>
+              <span className='font-medium text-xl '>Product Details</span>
+            </div> 
             {product && (
               <div className='flex'>
                 <div className='flex flex-col justify-center mr-8'>
@@ -72,13 +75,17 @@ export default async function Page({params}:{params:{slug:string}}){
                     <p className='text-sm text-purple-500'>{product.description}</p>
                   </div>
                 </div>
-                <Review />
               </div>
             )}
+             <Review />
           </div>
+         
         </div>
       </div>
-      
+
+    </div>
+  
     )
 }
+
 

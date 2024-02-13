@@ -15,7 +15,6 @@ const Container = (props: Props) => {
           </div>
         </Link>
         <div className='px-20'>
-            <div className='text-center'> Show some love by donating to the party </div>
           <Item/>
         </div>
       </div>
