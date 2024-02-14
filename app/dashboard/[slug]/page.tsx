@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import prisma from "@/app/prismadb"
 import ImageGallery from '../ImageGallery'
 import Info from '../Info'
@@ -12,7 +12,8 @@ import axios from 'axios'
 type Props = {}
 
 export default async function Page({params}:{params:{slug:string}}){
-    const productId = parseInt(params.slug,10)
+  const productId = parseInt(params.slug,10)
+    localStorage.setItem('myData', productId.toString());
     const session = await getServerSession(options);
     const currentUserId = session?.user.id
     const product = await prisma.product.findUnique({
@@ -29,6 +30,7 @@ export default async function Page({params}:{params:{slug:string}}){
     }
 
     const urlString = product?.images
+    localStorage.setItem("ecirp", product?.price.toString() || "")
     return(
     <div className='max-w-[1280px] mx-auto px-3 py-3'>
       <div className='grid grid-cols-2'>

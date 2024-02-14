@@ -37,7 +37,7 @@ const Review = ({productId,userId}: Props) => {
     }
   return (
     <div>
-         <button className='px-5 p-2 border-[1px] bg-purple-600 text-white rounded-lg mt-5' onClick={postData}>Add To Cart</button>
+         <button className='px-5 p-2 border-[1px] bg-purple-600 text-white rounded-lg mt-5' onClick={postData}>Checkout</button>
     </div>
   )
 }
