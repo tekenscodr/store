@@ -18,7 +18,7 @@ const AddCart = ({productId}: Props) => {
     const handleCart =  async() => {
         if(session?.user){
         try{
-            const response = await axios.post('/api/cart',{
+            await axios.post('/api/cart',{
                 productId:productId,
                 userId:id
             })
@@ -34,7 +34,7 @@ const AddCart = ({productId}: Props) => {
     }
     }
         return(
-            <div onClick={handleCart} className='flex items-center space-x-4 bg-purple-600 text-white px-6 p-2 rounded-full cursor-pointer'>
+            <div onClick={handleCart} className='flex items-center space-x-4 bg-blue-600 text-white px-6 p-2 rounded-full cursor-pointer'>
                 <span>
                     <CiShoppingCart size={24} />
                 </span>

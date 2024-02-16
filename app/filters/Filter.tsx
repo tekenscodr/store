@@ -101,49 +101,49 @@ const Filter = (props: Props) => {
                 </div>
                 <div className='flex flex-col py-3 pb-5 tet-sm text-neutral-600 border-b-[0.5px]'>
                     <span
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Blouses') ? "bg-purple-50":""}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Blouses') ? "bg-blue-50":""}`}
                         onClick={() => toggleCategory('Blouses')}
                     >
                         Blouses
                     </span>
                     <span
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Shirt') ? "bg-purple-50":""}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Shirt') ? "bg-blue-50":""}`}
                         onClick={() => toggleCategory('Shirt')}
                     >
                         Shirt
                     </span>
                     <span 
-                    className={`py-3 px-5 ${props.selectedCategories.includes('Denim&Jeans') ? 'bg-purple-50' : ''}`}
+                    className={`py-3 px-5 ${props.selectedCategories.includes('Denim&Jeans') ? 'bg-blue-50' : ''}`}
                     onClick={() => toggleCategory('Denim&Jeans')}
                     >
                         Denim&Jeans
                     </span>
                     <span 
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Party') ? 'bg-purple-50' : ''}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Party') ? 'bg-blue-50' : ''}`}
                         onClick={() => toggleCategory('Party')}
                     >
                     Party
                     </span>
                     <span 
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Pants') ? 'bg-purple-50' : ''}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Pants') ? 'bg-blue-50' : ''}`}
                         onClick={() => toggleCategory('Pants')}
                     >
                         Pants
                     </span>
                     <span 
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Skirts') ? 'bg-purple-50' : ''}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Skirts') ? 'bg-blue-50' : ''}`}
                         onClick={() => toggleCategory('Skirts')}
                     >
                         Skirts
                     </span>
                     <span 
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Tops&tees') ? 'bg-purple-50' : ''}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Tops&tees') ? 'bg-blue-50' : ''}`}
                         onClick={() => toggleCategory('Tops&tees')}
                     >
                         Tops&tees
                     </span>
                     <span 
-                        className={`py-3 px-5 ${props.selectedCategories.includes('Jackets&Coats') ? 'bg-purple-50' : ''}`}
+                        className={`py-3 px-5 ${props.selectedCategories.includes('Jackets&Coats') ? 'bg-blue-50' : ''}`}
                         onClick={() => toggleCategory('Jackets&Coats')}
                     >
                         Jackets&Coats

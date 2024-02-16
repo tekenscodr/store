@@ -16,7 +16,7 @@ const ImageGallery = ({imageUrls}: Props) => {
                 <div key={index} className='image h-[120px] w-[120px] relative rounded-lg p-3'>
                     {/* <img onClick={() => setSelectedImage(index)} className={`w-[70px] h-[70px] 
                     rounded-lg mb-3 p-1 object-cover object-top ${selectedImage === index ? "border-[1px] 
-                    border-purple-500":"border-[1px] border-purple-200"}`} src={url} alt={`Image ${index + 1}`} /> */}
+                    border-blue-500":"border-[1px] border-blue-200"}`} src={url} alt={`Image ${index + 1}`} /> */}
                 <Image 
                     src={urlArray[0]}
                     alt=''

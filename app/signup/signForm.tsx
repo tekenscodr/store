@@ -63,7 +63,7 @@ const SignForm = (props: Props) => {
             placeholder='password'
             onChange={(e) => setUser({...user, password: e.target.value})}
              />
-             <button onClick={Register} className='p-2 border bg-purple-600 text-white border-gray-300 mt-2 mb-4 focus:outline-none focus:border-gray-600'>
+             <button onClick={Register} className='p-2 border bg-blue-600 text-white border-gray-300 mt-2 mb-4 focus:outline-none focus:border-gray-600'>
                 Register Now
              </button>
              <Link href='/signin' className='text-sm text-center mt-5 text-neutral-600'>Already have an Account?</Link>

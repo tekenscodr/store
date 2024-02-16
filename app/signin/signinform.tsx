@@ -1,26 +1,36 @@
 'use client'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import {signIn} from "next-auth/react"
+import {signIn, useSession} from "next-auth/react"
 
 type Props = {}
-
 const Signinform = (props: Props) => {
+    const {data:session} = useSession()
+    const customer = session?.user.id.toString()
+    const email = session?.user.email.toString()
+    const name = session?.user.name.toString()
     const router = useRouter()
     const [user, setUser] = useState({
         email:'',
         password:''
     })
+    useEffect(() => {
+        localStorage.setItem('customer', customer?.toString());
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("name", name);
 
+      }, [email, customer, name]);
     const Login = () => {
         try{
             signIn('credentials', {
                 email:user.email,
                 password:user.password,
-                redirect:true,
-                callbackUrl:'/'
+                redirect:false,
             })
+            const prevPage = sessionStorage.getItem('prevPage') || '/';
+            router.push(prevPage);
+            sessionStorage.removeItem('prevPage')
         }catch{
             console.log('Error while logging in')
         }
@@ -47,7 +57,7 @@ const Signinform = (props: Props) => {
             placeholder='password'
             onChange={(e) => setUser({...user, password: e.target.value})}
              />
-             <button onClick={Login} className='p-2 border bg-purple-600 text-white border-gray-300 mt-2 mb-4 focus:outline-none focus:border-gray-600'>
+             <button onClick={Login} className='p-2 border bg-blue-600 text-white border-gray-300 mt-2 mb-4 focus:outline-none focus:border-gray-600'>
                 Login Now
              </button>
              <Link href='/signup' className='text-sm text-center mt-5 text-neutral-600'>Do not have an account</Link>

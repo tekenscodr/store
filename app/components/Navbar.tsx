@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {CiShoppingCart} from "react-icons/ci"
 import {BsChevronCompactUp} from "react-icons/bs"
@@ -13,6 +13,7 @@ const Navbar = (props: Props) => {
     const [showProfile, setShowProfile] = useState<boolean>(false)
     const [showNav, setShowNav] = useState<boolean>(false)
     const {data:session} = useSession()
+
     console.log(session?.user)
 
     const SignOut = () => {

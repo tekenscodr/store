@@ -25,7 +25,7 @@ const Allpurchased = async ({userId}: Props) => {
         return(
             <div className='relative flex items-center justify-center'>
                 <img src="empty.png" alt="" />
-                <h1 className='absolute top-[80%] text-2xl text-purple-600'>Empty Cart</h1>
+                <h1 className='absolute top-[80%] text-2xl text-blue-600'>No Items Purchased</h1>
             </div>
         )
     }
@@ -37,7 +37,6 @@ const Allpurchased = async ({userId}: Props) => {
                     <h1 className='text-2xl mb-3'>{cartProduct?.title}</h1>
                     <h2 className='mb-2 text-neutral-800'>Price: {cartProduct?.price}</h2>
                     <h3 className='text-sm text-neutral-600 mb-2'>Category: {cartProduct?.category}</h3>
-                    <h3 className='text-sm text-neutral-600 mb-2'>Style: {cartProduct?.style}</h3>
                     <h3 className='text-sm text-neutral-600 mb-2'>Store: {cartProduct?.store}</h3>
                     <p className='text-green-600'>Purchased <BsCheck2All size={20} className='text-green-600'/></p>
                 </div>

@@ -197,7 +197,7 @@ const Edit = ({id,title,description,category,style,store,size, inventory,color,p
             <Para setDescription={setDescription} description={formData.description} />
             <label htmlFor="" className='mt-10 inline-block font-medium'>Upload Images</label>
             <ImageUpload info={info} updateInfo={updateinfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
-            <button onClick={updateData} className='text-white mt-10 border-[1px] bg-purple-500 rounded-lg px-5 p-2'>Submit</button>
+            <button onClick={updateData} className='text-white mt-10 border-[1px] bg-blue-500 rounded-lg px-5 p-2'>Submit</button>
         </div>
     </div>
   )
